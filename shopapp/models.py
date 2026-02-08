@@ -47,6 +47,7 @@ class Product(models.Model):
         verbose_name_plural = "Продукты"
 
     def __str__(self):
+        """Возвращает отображаемое имя товара для админки и логов."""
         return self.name
 
 
@@ -66,4 +67,5 @@ class ProductAdditionalPhoto(models.Model):
         verbose_name_plural = "Дополнительные фото продуктов"
 
     def __str__(self):
+        """Возвращает подпись для дополнительного фото товара."""
         return f"Фото для {self.product.name}"
